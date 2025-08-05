@@ -20,4 +20,4 @@ if __name__ == "__main__":
 
     notifiers = [email, sms]
 
-    send_bulk(notifiers, "This is your alert!")
+    send_bulk(notifiers, "Alerta")
