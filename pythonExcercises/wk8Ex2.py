@@ -2,7 +2,7 @@ class BankAccount:
 
     def __init__(self, initial_balance=0):
         if initial_balance < 0:
-            raise ValueError("Initial balance cannot be negative.")
+            raise ValueError(" cannot be negative.")
         self._balance = initial_balance
 
     @property
@@ -12,25 +12,25 @@ class BankAccount:
     @balance.setter
     def balance(self, value):
         if value < 0:
-            raise ValueError("Balance cannot be set to a negative value.")
+            raise ValueError("error negative value")
         self._balance = value
 
     def deposit(self, amount):
         if amount <= 0:
-            raise ValueError("Deposit amount must be positive.")
+            raise ValueError("deposit negative")
         self._balance += amount
         print(f"Deposited: {amount}, New Balance: {self._balance}")
 
     def withdraw(self, amount):
         if amount <= 0:
-            raise ValueError("Withdrawal amount must be positive.")
+            raise ValueError("withdraw negative")
         if amount > self._balance:
-            raise ValueError("Insufficient funds.")
+            raise ValueError("fonduri insuficiente")
         self._balance -= amount
         print(f"Withdrew: {amount}, New Balance: {self._balance}")
 
 
-# Test the BankAccount class
+
 if __name__ == "__main__":
     try:
         account = BankAccount(100)  
@@ -58,4 +58,4 @@ if __name__ == "__main__":
             print("Error:", e)
 
     except Exception as e:
-        print("Failed to create account:", e)
+        print("failed to create account:", e)
