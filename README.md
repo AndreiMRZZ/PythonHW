@@ -1,5 +1,5 @@
 Aplicatia este un microserviciu Python construit cu Flask care ofera calcule matematice precum factorial, fibonacci si pow.
-Arhitectura respecta principiile OOP si este structurata pe module: routes (controller), services (logica de calcul), models (Pydantic), storage (SQLite) si utils (cache, auth, logging).
+Arhitectura(MVCS) respecta principiile OOP si este structurata pe module: routes (controller), services (logica de calcul), models (Pydantic), storage (SQLite) si utils (cache, auth, logging).
 Codul este standardizat folosind .flake8.
 
 Autentificarea API se face printr-un mecanism personalizat de tip authenticator cu secret key. Fiecare cerere catre endpoint-urile protejate necesita un token valid pentru acces. Pentru rezultate deja calculate anterior, se foloseste cache in-memory, evitand recalcularea si imbunatatind performanta.
