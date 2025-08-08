@@ -28,8 +28,6 @@ def db_init():
     conn.commit()
     conn.close()
 
-#si aici pot crea un obiect, sa nu mai am atatia parametrii
-#timestamp ul adaugat la obiectul la care se face tranz, pot pune ca param timestamp
 def save_requests(record: RequestRecord):
     conn = db_connection()
     cursor = conn.cursor()
