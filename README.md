@@ -2,7 +2,7 @@ Aplicatia este un microserviciu Python construit cu Flask care ofera calcule mat
 Arhitectura(MVCS) respecta principiile OOP si este structurata pe module: routes (controller), services (logica de calcul), models (Pydantic), storage (SQLite) si utils (cache, auth, log).
 Codul este standardizat folosind .flake8.
 
-Autentificarea API se face printr-un mecanism personalizat de tip authenticator cu secret key. Fiecare cerere catre endpoint-urile protejate necesita un token valid pentru acces. Pentru rezultate deja calculate anterior, se foloseste cache in-memory, evitand recalcularea si imbunatatind performanta.
+Accesarea unui API se face printr-un mecanism de tip authenticator cu secret key. Fiecare cerere catre endpoint-urile protejate necesita un token valid pentru acces. Pentru rezultate deja calculate anterior, se foloseste cache in-memory, evitand recalcularea si imbunatatind performanta.
 
 Toate operatiile matematice folosesc o functie centralizata handle_response() care construieste raspunsul JSON, salveaza cererea ca RequestRecord si returneaza un raspuns unificat pentru toate operatiile, cu campuri optionale (y, extra) cand este nevoie.
 
