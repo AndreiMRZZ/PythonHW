@@ -1,4 +1,4 @@
-Aplicatia este un microserviciu Python construit cu Flask care ofera calcule matematice precum factorial, fibonacci si pow.
+Aplicatia este un microserviciu Python construit cu Flask care ofera urmatoarele calcule matematice: factorial, fibonacci si pow.
 Arhitectura(MVCS) respecta principiile OOP si este structurata pe module: routes (controller), services (logica de calcul), models (Pydantic), storage (SQLite) si utils (cache, auth, log).
 Codul este standardizat folosind .flake8.
 
